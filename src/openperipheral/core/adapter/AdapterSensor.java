@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityMinecart;
@@ -119,6 +120,7 @@ public class AdapterSensor implements IPeripheralAdapter {
 				for (int z = -range; z <= range; z++) {
 
 					String type = "UNKNOWN";
+					String name = "";
 
 					if (!(x == 0 && y == 0 && z == 0) && world.blockExists(sx + x, sy + y, sz + z)) {
 
@@ -140,14 +142,18 @@ public class AdapterSensor implements IPeripheralAdapter {
 								} else if (block.blockMaterial.isSolid()) {
 									type = "SOLID";
 								}
+								name = block.getLocalizedName();
 							}
 						}
+						
+
 					}
 					HashMap tmp = new HashMap();
 					tmp.put("x", x);
 					tmp.put("y", y);
 					tmp.put("z", z);
 					tmp.put("type", type);
+					tmp.put("name", name);
 					results.put(++i, tmp);
 				}
 			}

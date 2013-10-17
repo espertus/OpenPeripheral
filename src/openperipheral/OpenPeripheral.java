@@ -72,7 +72,7 @@ import dan200.computer.api.ComputerCraftAPI;
 
 @Mod(
 	modid = "OpenPeripheral",
-	name = "OpenPeripheral",
+	name = "OpenPeripheral-Ellen",
 	version = "@VERSION@",
 	dependencies = "required-after:ComputerCraft;after:mmmPowersuits;after:BuildCraft|Core;after:AppliedEnergistics;after:Forestry;after:IC2;after:ThermalExpansion;after:Thaumcraft;after:MineFactoryReloaded;after:Railcraft;after:MiscPeripherals;after:Mystcraft")
 @NetworkMod(serverSideRequired = true, clientSideRequired = false, channels = { ConfigSettings.NETWORK_CHANNEL }, packetHandler = PacketHandler.class)
