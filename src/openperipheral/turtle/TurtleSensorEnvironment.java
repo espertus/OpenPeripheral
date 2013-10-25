@@ -33,4 +33,7 @@ public class TurtleSensorEnvironment implements ISensorEnvironment {
 		return 30;
 	}
 
+	public ITurtleAccess getTurtle() {
+		return turtle;
+	}
 }
